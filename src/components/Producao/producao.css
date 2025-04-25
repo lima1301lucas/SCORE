@@ -1,0 +1,128 @@
+.producao-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.back-button img {
+  width: 24px;
+}
+
+.producao-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.filtro-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filtro-campo label {
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-weight: bold;
+  color: #444;
+}
+
+.filtro-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filtro-acoes {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+.filtro-quantidade {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.filtro-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filtro-btn.limpar {
+  background-color: #f39c12;
+  color: white;
+}
+
+.filtro-btn.limpar:hover {
+  background-color: #e67e22;
+}
+
+.filtro-btn.pesquisar {
+  background-color: #3498db;
+  color: white;
+}
+
+.filtro-btn.pesquisar:hover {
+  background-color: #2980b9;
+}
+
+.producao-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.producao-table th,
+.producao-table td {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+}
+
+.producao-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.view-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #2980b9;
+}
