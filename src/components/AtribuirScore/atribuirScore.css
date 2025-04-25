@@ -1,0 +1,120 @@
+.atribuirscore-esquerda {
+    width: 100%;
+    max-width: 320px;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .filtro-campo label {
+    font-weight: bold;
+    color: #444;
+    font-size: 14px;
+  }
+  
+  .filtro-campo input,
+  .filtro-campo select {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .btn-pesquisar {
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn-pesquisar:hover {
+    background-color: #2980b9;
+  }
+  
+  .info-base {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .info-base p {
+    margin: 0.3rem 0;
+  }
+  
+  .mini-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+  }
+  
+  .mini-tabela th {
+    text-align: left;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    width: 40%;
+  }
+  
+  .mini-tabela td {
+    padding: 0.5rem;
+  }
+  
+  .botoes-score {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .botoes-score button {
+    padding: 0.7rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .botoes-score button:hover {
+    background-color: #ddd;
+  }
+  
+  .botoes-duplos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .botoes-duplos .grupo {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .botoes-duplos button {
+    flex: 1;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .botoes-duplos button:hover {
+    background-color: #ccc;
+  }
+  
