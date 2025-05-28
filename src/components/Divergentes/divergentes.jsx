@@ -1,20 +1,42 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { getDivergentes } from './divergentes';
 import seta from "../../assets/arrow-left.svg";
 import './divergentes.css';
 
 function Divergentes() {
   const navigate = useNavigate();
+  const [dados, setDados] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      const resultado = await getDivergentes();
+      if (resultado) {
+        setDados(resultado);
+      }
+      setCarregando(false);
+    }
+    fetchData();
+  }, []);
 
   const handleBack = () => {
     navigate(-1);
   };
 
+  const handleView = (placa, dataLeilao) => {
+    navigate('/verScore', {
+      state: { placa, dataLeilao }
+    });
+  };
+
   return (
     <div className="divergentes-container">
       <button className="back-button" onClick={handleBack}>
-        <img src={seta}/>
+        <img src={seta} alt="Voltar" />
       </button>
       <h1 className="divergentes-title">DIVERGENTES</h1>
+
       <table className="divergentes-table">
         <thead>
           <tr>
@@ -25,12 +47,26 @@ function Divergentes() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>ABC1234</td>
-            <td>15/05/2025</td>
-            <td>14/05/2025 23:59:59</td>
-            <td><button className="view-button" onClick={() => handleView("ABC1234")}>Visualizar</button></td>
-          </tr>
+          {carregando ? (
+            <tr>
+              <td colSpan="4" style={{ textAlign: 'center' }}>
+                <div className="loading-spinner"></div>
+              </td>
+            </tr>
+          ) : (
+            dados.map((item, index) => (
+              <tr key={index}>
+                <td>{item.vin}</td>
+                <td>{item.date}</td>
+                <td>{item.hour}</td>
+                <td>
+                  <button className="view-button" onClick={() => handleView(item.vin, item.date)}>
+                    Visualizar
+                  </button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
